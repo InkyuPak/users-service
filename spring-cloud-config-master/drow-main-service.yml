@@ -1,0 +1,20 @@
+# spring:
+#   datasource:
+#     driver-class-name: org.h2.Driver
+#     url: jdbc:h2:mem:testdb
+#     username: sa
+#     # password: '{cipher}9dfc6a1cab5fbb707b034a0692c02ab86f3f1e95ec9dba959f6957a652a587ad' # 일반글자아닌 암호화된 글자라고 중괄호 처리해야 이게 암호문으로 파악하여 config server가 복호화를 자동수행함. config server로 평문1234를 암호화한 암호문임
+#     password: '{cipher}AQAbSV2IQ43iyEgKWkyO0J9Lv+x53GIgAohtKlY2HXKG89sfUrzhgXQQIzEirntDTe1GxCpP3xDnnWY4YEs73ZiHzANt2Bwm84xwNNAJ1vg6gn0ZEr0Dl+pdLRbj4FjPmj2ZwbjhyBDvKNMZ/MbgRp60CoHcR+t0hIF90DKGeinaF3G7s4HUlvxfHtC1cHZWFivrYM+8cw1A9H7SatoiMBPDGTBxi6fdqHm8D0D5ea66d0gWL7mxscJE6NLtVLVMNhXcmUsJ429Tz9inZtZe3LAnQVhdTnCe1iFg6AWlZKKyhl+hNSb/AUXKKlUckYel3M9Gcj5QV6DefmKaOZ8rNOO8LxAqKLBG5l761DOEa/SNkLuLRubLk5rgHdvDR1a0O34='
+#     # 1234 의 RSA 암호문
+
+# token:
+#  expiration_time: 86400000 # 하루토큰 8640 * 1000
+#  secret: user_token_native_user_service
+ 
+gateway:
+  ip: 192.168.219.152
+
+order_service:
+  url: http://ORDER-SERVICE/order-service/%s/orders
+  exception:
+    orders_is_empty: There is no Items.  # 그냥 개발용 예외메시지 키값 규칙을 정의하자.

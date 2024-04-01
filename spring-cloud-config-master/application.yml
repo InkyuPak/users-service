@@ -1,0 +1,17 @@
+# token:
+#  expiration_time: 86400000 # 하루토큰 8640 * 1000
+#  secret: user_token_native_application_changed_#2
+token:
+ expiration_time: 86400000 # 하루토큰 8640 * 1000
+ secret: '{cipher}AQBGpuVyZ/Me1TQuXApZS4NzrZvPS9Az799K0ywTCYcbTlKrHtGzpPUOOa+wY/GH1kSA8YpbpZgAbE6mURySJcwIXiZ60nwiNlF7g6V4vLQnBXGjGNLM9m2armp1mDQJjpuAnDkHlveQGNnqHDWrwJ0FkmsY0Ukq+Ys/sny5wsmzrGgcDdTze4JkHMub2xyHiiz4ci/vgAvrwtGr+eQOfoh2N+Ol6Gv1532NGwX9CK6I4uobDfvbv+HdBnpwyJZ6mXRk60I790/qWrfr4+bHOGcBubcCvCKKO2wQasJ4g27da3tlY3Jeay7E9Of/KtULh630YLbpGe+rRYkYBZcPjp7wqszKqQ7xF/ONkJmjxrYlMWCCgBNuQYHvnOal23KQ5YuSP2t7PjoFEmHfZ+VcZUPn' 
+ # user_token_native_ecommerce
+ hours: 10
+ 
+gateway:
+  ip: 192.168.0.33
+
+# application.yml은 default파일로 모두 해당되고, 우선순위는 각어플리에키션의 yml보다 높고, 서비스이름yml이나 서비스이름-profile.yml보다 낮다. 우선순위대로 설정값들 오버라이드되낟.
+# config server는 그냥 단순히 요청에 대해 파일들을 응답준다. config, profiles의 설정키들의 값을 이어서 요청 uri path를 구성하여 요청을 보내게되고, 그에 응답준다..
+# 크롬으로 get으로 확인할 수 있고, 이 응답에는 default applicationyml이 무조건 들어가기때문에,
+# 중복 설정값은 appliction.yml에 놓으면 프로파일이나 서비스이름으로 다른 yml설정파일로 설정되는 ms라 할지라도, config server의 application.yml을 중첩하기때문에
+# 우선순위 설정값이 있지 않는 이상, 설정되어 중복설정을 하나로 관리할 수 있음. 그래서 토큰같은 경우, 하나로 관리 쉬움``   \]  

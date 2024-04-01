@@ -1,0 +1,12 @@
+# token:
+#  expiration_time: 86400000 # 하루토큰 8640 * 1000
+#  secret: '{cipher}AQBGpuVyZ/Me1TQuXApZS4NzrZvPS9Az799K0ywTCYcbTlKrHtGzpPUOOa+wY/GH1kSA8YpbpZgAbE6mURySJcwIXiZ60nwiNlF7g6V4vLQnBXGjGNLM9m2armp1mDQJjpuAnDkHlveQGNnqHDWrwJ0FkmsY0Ukq+Ys/sny5wsmzrGgcDdTze4JkHMub2xyHiiz4ci/vgAvrwtGr+eQOfoh2N+Ol6Gv1532NGwX9CK6I4uobDfvbv+HdBnpwyJZ6mXRk60I790/qWrfr4+bHOGcBubcCvCKKO2wQasJ4g27da3tlY3Jeay7E9Of/KtULh630YLbpGe+rRYkYBZcPjp7wqszKqQ7xF/ONkJmjxrYlMWCCgBNuQYHvnOal23KQ5YuSP2t7PjoFEmHfZ+VcZUPn' 
+           # user_token_native_ecommerce
+ 
+gateway:
+  ip: 192.168.0.33
+
+token:
+  secret: my_token_default
+  user: my_token_user
+  microservice: my_token_microservice
